@@ -1,0 +1,101 @@
+############ - Text settings - ###########
+background no
+own_window yes
+##if own_window is yes, you may specify type normal, desktop, dock, panel or override (default: normal). Desktop windows are special windows that have no window decorations; are always visible on your desktop; do not appear in your pager or taskbar; and are sticky across all workspaces. Panel windows reserve space along a desktop edge, just like panels and taskbars, preventing maximized windows from overlapping them. The edge is chosen based on the alignment option. Override windows are not under the control of the window manager. Hints are ignored. This type of window can be useful for certain situations.
+#own_window_type desktop
+#own_window_type normal
+own_window_type overide
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+use_xft yes
+override_utf8_locale yes
+font Sans:size=10
+xftfont Sans:size=9
+xftalpha 1
+update_interval 1.0 
+total_run_times 0
+double_buffer yes 
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+###调整个CONKY的最小最大宽度值###
+minimum_size 210 720
+maximum_width 210
+alignment top_right
+###相对于右上角的偏移量###
+gap_x 8
+gap_y 15
+no_buffers yes 
+cpu_avg_samples 2
+# set to yes if you want all text to be in uppercase
+uppercase no
+use_spacer none
+out_to_console no
+default_color grey
+default_shade_color black
+default_outline_color white
+#############################################################################################
+TEXT
+${font style=Bold:size=10}${time %F   %H:%M   %a}
+${color }${font }$uptime${color green}   https://kashu.org${font }
+#${color lightgreen}$stippled_hr
+#${color grey}CPU Used:$alignr${color red} $cpu%
+${color }CPU    ${color red}${freq_g}    ${cpu}%    ${acpitemp}°C
+#${color }CUP1: ${freq_g 1}GHz ${cpubar cpu1 3}
+#CUP2: ${freq_g 2}GHz ${cpubar cpu2 3}
+#CUP3: ${freq_g 3}GHz ${cpubar cpu3 3}
+#CUP4: ${freq_g 4}GHz ${cpubar cpu4 3}
+${color }MEM   ${color red}$memperc%$alignr$mem${color } / $memmax
+${membar 3 80}
+SWAP   ${swapperc}%${alignr}${swap} / ${swapmax}
+${swapbar 3 160} 
+${color lightgreen}$stippled_hr
+${color }Load(1 5 15m): $loadavg
+Processes:$alignr$processes  ($running_processes running)
+Kernel:$alignr${kernel}
+#${color lightgreen}$stippled_hr
+${color #ddaa00}Highest CPU$alignr PID    CPU%
+${color lightgrey}${top name 1}$alignr${top pid 1}  ${top cpu 1}
+${top name 2}$alignr${top pid 2}  ${top cpu 2}
+${top name 3}$alignr${top pid 3}  ${top cpu 3}
+${top name 4}$alignr${top pid 4}  ${top cpu 4}
+${color #ddaa00}Highest MEM$alignr PID   MEM%
+${color lightgrey}${top_mem name 1}$alignr${top_mem pid 1}  ${top_mem mem 1}
+${top_mem name 2}$alignr${top_mem pid 2}  ${top_mem mem 2}
+${top_mem name 3}$alignr${top_mem pid 3}  ${top_mem mem 3}
+${top_mem name 4}$alignr${top_mem pid 4}  ${top_mem mem 4}
+${color lightgreen}$stippled_hr
+#${color green}Network Info${hr 1}${color}
+${color green}Network Info${alignr}TCP_Conn: ${tcp_portmon 1 65535 count}
+${color white}${font style=Bold}eth0${font}${alignr}IP: ${color #dcff82}${addr eth0}${color}
+${voffset 1}${color white}U:${color #dcff82} ${upspeedf eth0} KB/s${alignr}${color white}D:${color dcff82} ${downspeedf eth0} KB/s
+#${downspeedgraph eth0 25,98 000000 4ea5cd}${voffset 1} ${alignr}${upspeedgraph eth0 25,98 000000 296dac}
+${downspeedgraph eth0 25,100 000000 ff0000} ${alignr}${upspeedgraph eth0 25,100 000000 00ff00}
+${color white}U_Total: ${color #dcff82}${totalup eth0}$alignr${color white}D_Total:${color #dcff82}${totaldown eth0}
+#####${color lightgreen}$stippled_hr
+
+#${wireless_bitrate wlan0}
+${color white}${font style=Bold}wlan0${font}${alignr}IP: ${color #dcff82}${addr wlan0}${color}
+${color yellow}ESSID:${wireless_essid wlan0}${alignr}${wireless_link_qual_perc wlan0}%
+${voffset 1}${color white}U:${color #dcff82} ${upspeedf wlan0} KB/s${alignr}${color white}D:${color dcff82} ${downspeedf wlan0} KB/s
+${downspeedgraph wlan0 25,100 000000 ff0000} ${alignr}${upspeedgraph wlan0 25,100 000000 00ff00}
+${color white}U_Total: ${color #dcff82}${totalup wlan0}$alignr${color white}D_Total:${color #dcff82}${totaldown wlan0}
+${color lightgreen}$stippled_hr
+#${membar 3,160}
+#${color }ROOT:$alignr${color}${fs_used /}/${fs_size /}
+#${fs_bar 3 /}
+${color white}/dev/sda: ${color #dcff82}${hddtemp /dev/sda}°C${alignr}${color white}/dev/sdb: ${color #dcff82}${hddtemp /dev/sdb}°C
+${color white}sda_W: ${color #dcff82}${diskio_write /dev/sda}$alignr${color white}sda_R: ${color #dcff82}${diskio_read /dev/sda}
+${diskiograph_write /dev/sda 25,100 000000 ff0000}${alignr}${diskiograph_read /dev/sda 25,100 000000 00ff00}
+${color white}sdb_W: ${color #dcff82}${diskio_write /dev/sdb}$alignr${color white}sdb_R: ${color #dcff82}${diskio_read /dev/sdb}
+${diskiograph_write /dev/sdb 25,100 000000 ff0000}${alignr}${diskiograph_read /dev/sdb 25,100 000000 00ff00}
+#${color }/home$alignr${color}${fs_used /home} / ${fs_size /home}
+#${fs_bar 3 /home}
+#${color }/$alignr${color}${fs_used /} / ${fs_size /}
+#${fs_bar 3 /}
+${color }/tmp$alignr${color}${fs_used /tmp} / ${fs_size /tmp}
+${fs_bar 3 /tmp}
+#${color lightgreen}$stippled_hr
+#${color green}RSS Reading
+#${color white}${rss http://www.kashu.org/feed 5 item_titles 14}

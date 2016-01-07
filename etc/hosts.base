@@ -1,0 +1,79 @@
+127.0.0.1	localhost
+127.0.0.1	kashu
+127.0.0.1 kashu.org
+10.0.3.151 kashu
+10.0.3.151 kashu.org
+127.0.0.1 www.kashu.org
+10.0.3.238 kashu.org
+10.0.3.238 www.kashu.org
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+
+#garbage
+127.0.0.1 1u.com
+127.0.0.1 nav.jx139.com
+127.0.0.1 jx139.com
+127.0.0.1 jx.m.139site.com
+127.0.0.1 m.139site.com
+127.0.0.1 139site.com
+127.0.0.1 mobile.jx139.com
+127.0.0.1 m.jx139.com
+127.0.0.1 sp3.9192.cn
+127.0.0.1 *.9192.cn
+127.0.0.1 9192.cn
+
+# Youku
+127.0.0.1 atm.youku.com
+127.0.0.1 fvid.atm.youku.com
+127.0.0.1 html.atm.youku.com
+127.0.0.1 lstat.youku.com
+127.0.0.1 speed.lstat.youku.com
+127.0.0.1 static.atm.youku.com
+127.0.0.1 static.lstat.youku.com
+127.0.0.1 stat.youku.com
+127.0.0.1 urchin.lstat.youku.com
+127.0.0.1 valb.atm.youku.com
+127.0.0.1 valc.atm.youku.com
+127.0.0.1 valf.atm.youku.com
+127.0.0.1 valo.atm.youku.com
+127.0.0.1 valp.atm.youku.com
+127.0.0.1 vid.atm.youku.com
+127.0.0.1 walp.atm.youku.com
+# iqiyi.com
+127.0.0.1	cpro.baidu.com
+127.0.0.1	msg.video.qiyi.com
+127.0.0.1	track.cupid.qiyi.com
+127.0.0.1	show.cupid.qiyi.com
+127.0.0.1	pic1.qiyipic.com
+127.0.0.1	msg.iqiyi.com
+127.0.0.1	mixer.cupid.iqiyi.com
+127.0.0.1 afp.qiyi.com
+127.0.0.1 focusbaiduafp.allyes.com
+#tudo.com
+127.0.0.1 adextensioncontrol.tudou.com
+127.0.0.1 adplay.tudou.com
+127.0.0.1 adcontrol.tudou.com
+127.0.0.1 iwstat.tudou.com
+127.0.0.1 nstat.tudou.com
+127.0.0.1 stat.tudou.com
+127.0.0.1 stats.tudou.com
+127.0.0.1 at-img1.tdimg.com
+127.0.0.1 at-img2.tdimg.com
+127.0.0.1 at-img3.tdimg.com
+127.0.0.1 *.p2v.tudou.com*
+127.0.0.1 at-img1.tdimg.com
+127.0.0.1 at-img2.tdimg.com
+127.0.0.1 at-img3.tdimg.com
+
+# Section Start: Localhost
+127.0.0.1        localhost
+255.255.255.255  broadcasthost
+::1              localhost
+fe80::1%lo0      localhost
+# Section End: Localhost
+

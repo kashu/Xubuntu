@@ -1,0 +1,25 @@
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+
+echo 9 > /sys/class/backlight/acpi_video0/brightness
+
+mkdir -p /tmp/ChromiumCacheDir/firefox /tmp/ChromiumCacheDir/chrome /tmp/kvm /tmp/linux
+/bin/chown kashu.kashu -R /tmp/ChromiumCacheDir/* /tmp/kvm /tmp/linux
+
+fstrim /home
+fstrim /
+
+#No need anymore
+#sleep 60 && /usr/sbin/hddtemp -4dl 127.0.0.1 /dev/sd{a,b}
+
+exit 0

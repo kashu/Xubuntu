@@ -1,0 +1,38 @@
+#set match-hidden-files off (do not show hidden files in the list: really useful when working in your home directory)
+#set show-all-if-ambiguous on (show the list at first TAB, instead of beeping and and waiting for a second TAB to do that)
+#set completion-query-items 1000 (show the "Display all 123 possibilities? (y or n)" prompt only for really long lists)
+#set page-completions off (removes the annoying "-- more --" prompt for long lists)
+#
+# More:
+# http://www.pixelbeat.org/settings/.inputrc
+# https://wiki.ubuntu.com/Spec/EnhancedBash
+# https://www.gnu.org/software/bash/manual/html_node/Readline-Init-File-Syntax.html
+
+# do not show hidden files in the list
+set match-hidden-files off
+
+# Don't echo ^C etc (new in bash 4.1)
+# Note this only works for the command line itself,
+# not if already running a command.
+set echo-control-characters off
+
+# Enable coloring for tab completions with bash >= 4.3
+set colored-stats on
+
+# auto complete ignoring case
+set completion-ignore-case on
+set show-all-if-ambiguous on
+
+#show the "Display all 123 possibilities? (y or n)" prompt only for really long lists
+set completion-query-items 300
+
+# By default up/down are bound to previous-history
+# and next-history respectively. The following does the
+# same but gives the extra functionality where if you
+# type any text (or more accurately, if there is any text
+# between the start of the line and the cursor),
+# the subset of the history starting with that text
+# is searched (like 4dos for e.g.).
+# Note to get rid of a line just Ctrl-C
+"\e[A": history-search-backward
+"\e[B": history-search-forward
