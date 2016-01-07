@@ -1,12 +1,10 @@
 " Modeline and Notes {
+"		kashu		https://kashu.org		Email: kashuorg@163.com
+"   Last updated: 2015-08-03
 "   vim: set foldmarker={,} foldlevel=0:
 "   
 "   This is my personal .vimrc, I don't recommend you copy it, just
 "   use the pieces you want. 
-"   Contact me : tuantuan <dangoakachan@foxmail.com>
-"
-"   Modifier: kashu: https://kashu.org  Email: kashuorg@163.com
-"   Last updated: 2015-08-03
 " }
 
 let g:LargeFile=10
